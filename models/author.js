@@ -13,7 +13,7 @@ authorSchema.pre("remove", function (next) {
     if(err) {
       next(err);
     } else if(books.length > 0) {
-      next(new Error("Can not delete this author. This author still has books."));
+      next(new Error("Unable to delete the author. This author still has books."));
     } else {
       next();
     }
